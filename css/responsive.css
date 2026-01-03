@@ -1,103 +1,412 @@
 /* ========================================================================== 
-   Media Queries
+   Media Queries - Diseño Moderno Responsive
    ========================================================================== */
+/* Desktop: 992px – 1023px */
+@media (min-width: 992px) and (max-width: 1023px) {
+    .portfolioContainer {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
 
-/* Desktop grandes */
-@media only screen and (min-width: 992px) {
-    .service-list { margin-bottom: 30px; }
-    .c-logo-part img ul li { margin: 0 15px; }
-    .form { margin: 0 0 0 20px; }
-    .main-nav { display: block !important; }
+/* Desktop*/
+@media (min-width: 992px) {
+    .service-list {
+        margin-bottom: 24px;
+    }
+
+    .form {
+        margin: 0;
+    }
+
+    .main-nav {
+        display: flex !important;
+    }
+
+    .portfolioContainer {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .Portfolio-box {
+        width: 100% !important;
+        /* fuerza el ancho de la columna */
+        float: none !important;
+        /* anula float de Bootstrap */
+        aspect-ratio: 1 / 1;
+        border-radius: var(--radius-lg);
+        overflow: hidden;
+        box-shadow: var(--shadow-lg);
+    }
 }
 
 /* Tablets horizontales */
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-    body { font-size: 13px; }
-    p { line-height: 20px; }
-    .header h1 { font-size: 46px; }
-    .main-nav ul li a { padding: 14px; }
-    .small-logo { padding: 0 20px; }
-    h2 { font-size: 30px; }
-    h6 { font-size: 16px; }
-    h3 { font-size: 15px; }
-    .service-list { margin-bottom: 20px; font-size: 15px; }
-    .featured-work p.padding-b { padding-bottom: 15px; }
-    .main-section { padding: 70px 0; }
-    .c-logo-part ul li { margin: 0 1%; float: left; width: 18%; }
-    .c-logo-part ul li a { display: block; }
-    .c-logo-part ul li a img { display: block; }
-    .form { margin: 0; }
-    .contact-info-box { margin: 0; }
-    .social-link { margin: 0; }
-    .main-nav li a { padding: 8px 15px; }
+@media (min-width: 768px) and (max-width: 991px) {
+    body {
+        font-size: 15px;
+    }
+
+    p {
+        line-height: 1.6;
+    }
+
+    .header h1 {
+        font-size: clamp(36px, 6vw, 48px);
+    }
+
+    .main-nav li {
+        margin: 0 2px;
+    }
+
+    .main-nav a {
+        padding: 8px 12px;
+        font-size: 11px;
+    }
+
+    .small-logo {
+        padding: 0 12px;
+    }
+
+    .small-logo img {
+        width: 50px;
+        height: 50px;
+    }
+
+    h2 {
+        font-size: clamp(28px, 4vw, 36px);
+    }
+
+    h6 {
+        font-size: 16px;
+    }
+
+    h3 {
+        font-size: 18px;
+    }
+
+    .service-list {
+        margin-bottom: 20px;
+        font-size: 14px;
+    }
+
+    .main-section {
+        padding: 60px 0;
+    }
+
+    .form {
+        margin: 0;
+    }
+
+    .contact-info-box {
+        margin: 0 0 20px 0;
+    }
+
+    .social-link {
+        margin: 0;
+    }
+
+    .main-nav li a {
+        padding: 8px 14px;
+    }
+
+    .portfolioContainer {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+    }
+
+    .Portfolio-box {
+        max-width: 320px !important;
+    }
+
+    .row {
+        flex-direction: column;
+    }
+
+    .row figure {
+        width: 90%;
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 24px;
+    }
 }
 
 /* Mobile Landscape / pequeño */
-@media only screen and (max-width: 767px) {
-    body { font-size: 12px; }
-    h2 { font-size: 26px; }
-    h3 { font-size: 14px; }
-    h6 { font-size: 16px; margin-bottom: 40px; }
-    p { line-height: 18px; }
+@media (max-width: 767px) {
+    body {
+        font-size: 15px;
+    }
 
-    .service-list { font-size: 12px; margin-bottom: 20px; }
+    h2 {
+        font-size: clamp(28px, 6vw, 36px);
+    }
 
-    .we-create li { font-size: 13px; padding: 0 0 0 8px; }
-    .header h1 { font-size: 28px; }
-    .header { padding: 60px 0; }
-    .main-section { padding: 60px 0 70px; }
+    h3 {
+        font-size: 16px;
+    }
+
+    h6 {
+        font-size: 16px;
+        margin-bottom: 40px;
+    }
+
+    p {
+        line-height: 1.6;
+    }
+
+    .service-list {
+        font-size: 14px;
+        margin-bottom: 20px;
+        padding: 20px;
+    }
+
+    .we-create li {
+        font-size: 16px;
+        padding: 0;
+    }
+
+    .header {
+        padding: 80px 20px 60px;
+        min-height: 100vh;
+        background-attachment: scroll;
+    }
+
+    .client-part {
+        background-attachment: scroll;
+        min-height: 50vh;
+    }
+
+    .header h1 {
+        font-size: clamp(32px, 8vw, 40px);
+        margin-bottom: 20px;
+    }
+
+    .logo img {
+        width: 180px;
+        margin-bottom: 24px;
+    }
+
+    .main-section {
+        padding: 60px 0;
+    }
 
     /* Nav responsive */
-    .main-nav { display: none; position: absolute; left: 0; width: 100%; top: 74px; margin: 0 auto; background: #fff; }
-    .main-nav li { display: block; }
-    .main-nav li.small-logo { display: none; }
-    .main-nav li a { display: block; padding: 7px 32px; border-bottom: none; }
-    .main-nav li a:hover { color: #7cc576; }
-    .res-nav_click { display: block; }
+    .main-nav {
+        display: none;
+        position: absolute;
+        left: 0;
+        width: 100%;
+        top: 100%;
+        margin: 0;
+        background: rgba(15, 23, 42, 0.98);
+        backdrop-filter: blur(20px);
+        padding: 16px 0;
+        box-shadow: var(--shadow-lg);
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .main-nav li {
+        display: block;
+        margin: 0;
+        width: 100%;
+    }
+
+    .main-nav li.small-logo {
+        display: none;
+    }
+
+    .main-nav li a {
+        display: block;
+        padding: 12px 24px;
+        border-bottom: 1px solid rgba(59, 130, 246, 0.1);
+        border-radius: 0;
+        text-align: left;
+    }
+
+    .main-nav li a:hover {
+        background: var(--color-primary);
+        color: #fff;
+    }
+
+    .res-nav_click {
+        display: block;
+    }
 
     /* Cards y secciones */
-    .team-leader-box { max-width: 307px; width: auto; float: none; margin: 0 auto; }
-    .team-leader-box:nth-of-type(3n) { margin: 0 auto; }
+    .team-leader-box {
+        max-width: 280px;
+        width: 100%;
+        margin: 0 auto 32px;
+    }
 
-    .featured-work { font-size: 12px; margin-top: 30px; }
-    .featured-box { font-size: 12px; }
-    .featured-box p { line-height: 18px; }
+    .team-leader-box:last-child {
+        margin-bottom: 0;
+    }
 
-    .Portfolio-box, .service-list {
-        margin-bottom: 20px; /* espacio entre cards */
+    .Portfolio-box,
+    .service-list {
+        margin-bottom: 20px;
     }
 
     /* Logos y otros elementos */
-    .c-logo-part ul a { margin-bottom: 5px; }
-    .main-section.team { padding: 60px 0 50px; }
-    .business-talking h2 { font-size: 36px; }
-    .contact-info-box { margin: 0 0 12px 30px; font-size: 12px; }
-    .contact-info-box span { line-height: 18px; }
-    .social-link { margin-left: 30px; }
-    .form { margin: 0 30px; }
-    .copyright { font-size: 12px; }
-    .business-talking a { padding: 10px 25px; font-size: 14px; }
-    .main-section.contact { padding: 60px 0 70px; }
-    .client-part-haead { font-size: 20px; line-height: 30px; }
-    .link { font-size: 14px; padding: 10px 25px; }
-    .logo img { width: 100px; }
-    .main-section.contact { background-size: contain; }
+    .main-section.team {
+        padding: 50px 0 40px;
+    }
+
+    .business-talking {
+        padding: 60px 0;
+    }
+
+    .business-talking h2 {
+        font-size: clamp(28px, 6vw, 36px);
+    }
+
+    .contact-info-box {
+        margin: 0 0 20px 0;
+        font-size: 14px;
+    }
+
+    .contact-info-box h3 {
+        float: none;
+        width: 100%;
+        margin-bottom: 8px;
+    }
+
+    .contact-info-box span {
+        line-height: 1.6;
+    }
+
+    .social-link {
+        margin: 0;
+        justify-content: center;
+    }
+
+    .form {
+        margin: 0;
+    }
+
+    .copyright {
+        font-size: 13px;
+    }
+
+    .main-section.contact {
+        padding: 50px 0 60px;
+    }
+
+    .client-part-haead {
+        font-size: clamp(18px, 4vw, 24px);
+        line-height: 1.6;
+    }
+
+    .link {
+        font-size: 14px;
+        padding: 12px 28px;
+    }
+
+    .main-section.contact {
+        background: none;
+    }
+
+    .portfolioContainer {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+
+
+    .client li a img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .whatsapp-float {
+        width: 56px;
+        height: 56px;
+        bottom: 20px;
+        right: 20px;
+    }
+
+    .whatsapp-float img {
+        width: 50px;
+        height: 50px;
+    }
 }
 
 /* Mobile Portrait / muy pequeño */
-@media only screen and (max-width: 479px) {
-    .contact-info-box { margin-left: 0px; }
-    .header { padding: 40px; }
-    .social-link { margin-left: 0px; }
-    .form { margin: 0; }
-
-    /* Cards */
-    .Portfolio-box, .service-list {
-        margin-bottom: 25px; /* más espacio vertical en portrait */
+@media (max-width: 479px) {
+    .contact-info-box {
+        margin-left: 0;
     }
 
-    .c-logo-part img ul li { display: block; }
-    .Portfolio-box { max-width: 300px !important; width: 96.4% !important; margin: 0 auto !important; }
-    .Portfolio-box img { max-width: 100%; }
-    .portfolioContainer { width: 280px !important; margin: 0 auto !important; }
+    .header {
+        padding: 60px 15px 40px;
+        min-height: 100vh;
+        background-attachment: scroll;
+    }
+
+    .client-part {
+        background-attachment: scroll;
+        min-height: 50vh;
+        padding: 60px 0;
+    }
+
+    .social-link {
+        margin-left: 0;
+        flex-wrap: wrap;
+    }
+
+    .form {
+        margin: 0;
+    }
+
+    /* Cards */
+    .Portfolio-box,
+    .service-list {
+        margin-bottom: 16px;
+    }
+
+    .Portfolio-box {
+        position: relative;
+        width: 100% !important;
+        max-width: none !important;
+        /* ← clave para móvil */
+        margin: 0 auto;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        aspect-ratio: 1 / 1;
+        ;
+    }
+
+    .portfolioContainer {
+        width: 90% !important;
+        margin: 0 auto !important;
+        gap: 12px;
+        justify-content: center !important;
+    }
+
+    .Portfolio-nav {
+        gap: 6px;
+    }
+
+    .Portfolio-nav li a {
+        padding: 8px 14px;
+        font-size: 11px;
+    }
+
+    .team-leader-box {
+        max-width: 100%;
+    }
+
+    .client li a img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .logo img {
+        width: 150px;
+    }
+
+    .header h1 {
+        font-size: clamp(28px, 7vw, 36px);
+    }
 }
